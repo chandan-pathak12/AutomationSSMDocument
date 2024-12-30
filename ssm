@@ -1,0 +1,16 @@
+schemaVersion: '2.2'
+description: Install and configure Nginx on an EC2 instance
+mainSteps:
+- action: aws:runShellScript
+  name: InstallNginx
+  inputs:
+    runCommand:
+    - sudo apt-get update -y
+    - sudo apt-get install nginx -y
+    - sudo systemctl start nginx
+    - sudo systemctl enable nginx
+- action: aws:runShellScript
+  name: ConfigureNginx
+  inputs:
+    runCommand:
+    - echo '<h1>Hello Welcome in 2025!!from Impressico devOps</h1>' | sudo tee /var/www/html/index.html
