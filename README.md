@@ -1,7 +1,7 @@
 
 Aim:- AWS Systems Manager (SSM) Document to install and configure Nginx on an EC2 instance
 
-Steps taken:- 
+Steps taken:- ..
 
 1. Install SSM agent on your machine(I am taking ubuntu EC2 instance here)
    1. sudo snap install amazon-ssm-agent --classic 
