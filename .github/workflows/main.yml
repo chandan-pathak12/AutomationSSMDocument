@@ -25,4 +25,7 @@ jobs:
           aws ssm send-command \
             --document-name "nginxdeployment" \
             --targets "Key=instanceIds,Values=i-026503cede68ba8ad" \
-            --comment "Deploying Nginx on EC2 instance"
+            --comment "Deploying Nginx on EC2 instance" \
+            --timeout-seconds 600 \
+            --max-concurrency "50" \
+            --max-errors "1"
